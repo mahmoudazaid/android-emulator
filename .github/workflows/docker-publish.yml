@@ -56,7 +56,7 @@ jobs:
           echo "Error: EMULATOR_DEVICE or ANDROID_VERSION is missing in the Dockerfile."
           exit 1
 
-      - name: Build and Push Multi-Platform Docker Images
+      - name: Build and Push linux/amd64 platform Docker Images
         run: |
           echo "Building multi-platform images for: ${{ env.DOCKER_USERNAME }}/emulator:${{ env.EMULATOR_DEVICE }}-android_${{ env.ANDROID_VERSION }}"
           docker buildx build \
